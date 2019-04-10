@@ -1,10 +1,10 @@
 export class Data{
 
-   date:Date;
-   luminosity:number;
-   temperature:number;
-   noise:number;
-   vibration:number;
+   private date:Date;
+   private luminosity:number;
+   private temperature:number;
+   private noise:number;
+   private vibration:number;
 
    constructor(date:Date,
       luminosity:number,

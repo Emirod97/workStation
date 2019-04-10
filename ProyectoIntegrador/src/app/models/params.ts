@@ -1,13 +1,13 @@
 export class Params{
 
-    _luminosityMax: number;
-    _luminosityMin: number;
-    _temperatureMax: number;
-    _temperatureMin: number;
-    _noiseMax: number;
-    _noiseMin: number;
-    _vibrationMax: number;
-    _vibrationMin: number;
+    private _luminosityMax: number;
+    private _luminosityMin: number;
+    private _temperatureMax: number;
+    private _temperatureMin: number;
+    private _noiseMax: number;
+    private _noiseMin: number;
+    private _vibrationMax: number;
+    private _vibrationMin: number;
 
 
     constructor(luminosityMax: number, luminosityMin: number, temperatureMax: number, temperatureMin: number, noiseMax: number, noiseMin: number, vibrationMax: number, vibrationMin: number){
@@ -33,7 +33,7 @@ export class Params{
     }
 
     get luminosityMin(): number{
-        return this.luminosityMin;
+        return this._luminosityMin;
     }
     
     set luminosityMin(luminosityMin: number){

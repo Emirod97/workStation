@@ -4,10 +4,10 @@ import { Alerts } from './alerts';
 
 export class Sensor{
 
-    id:string;
-    data:Data;
-    params:Params;
-    alerts:Alerts;
+    private id:string;
+    private data:Data;
+    private params:Params;
+    private alerts:Alerts;
 
     constructor(id:string, data:Data, params:Params, alerts:Alerts){
 

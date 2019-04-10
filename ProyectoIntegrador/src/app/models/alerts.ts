@@ -2,8 +2,8 @@ import { ReturnStatement } from '@angular/compiler';
 
 export class Alerts{
     
-    _id:number;
-    _description:string;
+    private _id:number;
+    private _description:string;
 
     constructor(id: number, description: string){
         this._id = id;
