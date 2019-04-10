@@ -8,4 +8,13 @@ export class Sensor{
     data:Data;
     params:Params;
     alerts:Alerts;
+
+    constructor(id:string, data:Data, params:Params, alerts:Alerts){
+
+        this.id = id;
+        this.data = data;
+        this.params = params;
+        this.alerts = alerts;
+
+    }
 }
