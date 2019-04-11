@@ -6,4 +6,33 @@
 
 <ion-content padding>
 
+  <p class="page-header">Dispostivo 1</p>
+  <p class="update-time">Última actualización hace 34 segundos</p>
+
+  <!-- Segment with default selection -->
+  <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+    <ion-segment-button value="python">
+      <ion-label>Iluminación</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="javascript">
+      <ion-label>Temperatura</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="javascript">
+      <ion-label>Ruido</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="javascript">
+      <ion-label>Vibración</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-card>
+    <ion-card-content>
+      <p>Test test test</p>
+      <p>Test test test</p>
+      <p>Test test test</p>
+      <p>Test test test</p>
+      <p>Test test test</p>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
