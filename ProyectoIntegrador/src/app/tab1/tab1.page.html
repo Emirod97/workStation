@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Resumen</ion-title>
-    <ion-buttons slot="end">
-      <ion-icon class="toolbar-icon" name="log-out"></ion-icon>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon name="log-out"></ion-icon>
+        <!-- <ion-icon src="/assets/logout.svg"></ion-icon> -->
+      </ion-button>
     </ion-buttons>
+    <ion-title>Resumen</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,34 +20,36 @@
         <ion-grid>
           <ion-row>
             <ion-col>
-              <div class="div-icono"><img class="variable-icono" src="https://image.flaticon.com/icons/png/512/53/53565.png"></div>
+              <div class="div-icono"><img src="/assets/iluminacion.svg"></div>
               <div class="div-variable"><p class="variable-titulo">Iluminación</p>
-              <ion-progress-bar value="0.3"></ion-progress-bar>
+              <ion-progress-bar color="success" value="0.1"></ion-progress-bar>
               <p class="variable-valor">500 lms</p></div>
             </ion-col>
             <ion-col>
-              <div class="div-icono"><img src="https://image.flaticon.com/icons/png/512/53/53565.png"></div>
-              <div class="div-variable"><p class="variable-titulo">Iluminación</p>
-              <ion-progress-bar value="0.3"></ion-progress-bar>
-              <p class="variable-valor">500 lms</p></div>
+              <div class="div-icono"><img src="/assets/temperatura.svg"></div>
+              <div class="div-variable"><p class="variable-titulo">Temperatura</p>
+              <ion-progress-bar color="danger" value="0.7"></ion-progress-bar>
+              <p class="variable-valor">35 C</p></div>
             </ion-col>
           </ion-row>
 
           <ion-row>
             <ion-col>
-              <div class="div-icono"><img src="https://image.flaticon.com/icons/png/512/53/53565.png"></div>
-              <div class="div-variable"><p class="variable-titulo">Iluminación</p>
-              <ion-progress-bar value="0.3"></ion-progress-bar>
-              <p class="variable-valor">500 lms</p></div>
+              <div class="div-icono"><img class="variable-icono" src="/assets/ruido.svg"></div>
+              <div class="div-variable"><p class="variable-titulo">Ruido</p>
+              <ion-progress-bar color="warning" value="0.5"></ion-progress-bar>
+              <p class="variable-valor">210 dBA</p></div>
             </ion-col>
             <ion-col>
-              <div class="div-icono"><img src="https://image.flaticon.com/icons/png/512/53/53565.png"></div>
-              <div class="div-variable"><p class="variable-titulo">Iluminación</p>
-              <ion-progress-bar value="0.3"></ion-progress-bar>
-              <p class="variable-valor">500 lms</p></div>
+              <div class="div-icono"><img src="/assets/vibracion.svg"></div>
+              <div class="div-variable"><p class="variable-titulo">Vibración</p>
+              <ion-progress-bar color="success" value="0.6"></ion-progress-bar>
+              <p class="variable-valor">30 Hz</p></div>
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-card-content>
     </ion-card>
+
+
 </ion-content>
