@@ -18,6 +18,12 @@ ion-progress-bar
   border-radius: 11px;
 }
 
+ion-button{
+  --clear-light:none;
+  width:70%;
+  margin: auto;
+}
+
 img
 {
   height: 20px;
