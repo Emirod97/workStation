@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { NavigationCancel, Router } from '@angular/router';
+import  { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-details',
@@ -9,13 +10,53 @@ import { NavigationCancel, Router } from '@angular/router';
 })
 export class DetailsPage implements OnInit {
 
+  @ViewChild('lineCanvas') lineCanvas;
+
+  lineChart: any;
+
   constructor(public router: Router) { }
 
   ngOnInit() {
+    this.mostrar();
   }
 
   back(){
     this.router.navigateByUrl("/app/tabs/tab1");
+  }
+
+  mostrar(){
+    this.lineChart = new Chart(this.lineCanvas.nativeElement, {
+
+      type: 'line',
+      data: {
+          labels: ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00","07:00", "08:00", "09:00", "10:00", "11:00", "12:00"],
+          datasets: [
+              {
+                  label: "lms",
+                  fill: false,
+                  lineTension: 0.1,
+                  backgroundColor: "rgba(75,192,192,0.4)",
+                  borderColor: "rgba(185,184,182,1)",
+                  borderCapStyle: 'butt',
+                  borderDash: [],
+                  borderDashOffset: 0.0,
+                  borderJoinStyle: 'miter',
+                  pointBorderColor: "rgba(75,192,192,1)",
+                  pointBackgroundColor: "#fff",
+                  pointBorderWidth: 1,
+                  pointHoverRadius: 5,
+                  pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                  pointHoverBorderColor: "rgba(220,220,220,1)",
+                  pointHoverBorderWidth: 2,
+                  pointRadius: 3,
+                  pointHitRadius: 10,
+                  data: [65, 59, 80, 81, 56, 55, 40, 50, 60, 75, 55, 38, 68],
+                  spanGaps: false,
+              }
+          ]
+      }
+
+  });
   }
 
 }
