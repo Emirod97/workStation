@@ -6,53 +6,62 @@
         <!-- <ion-icon src="/assets/logout.svg"></ion-icon> -->
       </ion-button>
     </ion-buttons>
-    <ion-title>Resumen</ion-title>
+      <ion-title>Resumen</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-    <ion-card class="welcome-card">
-      <ion-card-header>
-        <p class="card-title">Dispositivo 1</p>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="div-icono"><img src="/assets/iluminacion.svg"></div>
-              <div class="div-variable"><p class="variable-titulo">Iluminación</p>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <p class="card-title">Dispositivo 1</p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="div-icono"><img src="/assets/iluminacion.svg"></div>
+            <div class="div-variable">
+              <p class="variable-titulo">Iluminación</p>
               <ion-progress-bar color="success" value="0.3"></ion-progress-bar>
-              <p class="variable-valor">500 lms</p></div>
-            </ion-col>
-            <ion-col>
-              <div class="div-icono"><img src="/assets/temperatura.svg"></div>
-              <div class="div-variable"><p class="variable-titulo">Temperatura</p>
+              <p class="variable-valor">500 lms</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="div-icono"><img src="/assets/temperatura.svg"></div>
+            <div class="div-variable">
+              <p class="variable-titulo">Temperatura</p>
               <ion-progress-bar color="danger" value="0.7"></ion-progress-bar>
-              <p class="variable-valor">35 C</p></div>
-            </ion-col>
-          </ion-row>
+              <p class="variable-valor">35 C</p>
+            </div>
+          </ion-col>
+        </ion-row>
 
-          <ion-row>
-            <ion-col>
-              <div class="div-icono"><img class="variable-icono" src="/assets/ruido.svg"></div>
-              <div class="div-variable"><p class="variable-titulo">Ruido</p>
+        <ion-row>
+          <ion-col>
+            <div class="div-icono"><img class="variable-icono" src="/assets/ruido.svg"></div>
+            <div class="div-variable">
+              <p class="variable-titulo">Ruido</p>
               <ion-progress-bar color="warning" value="0.5"></ion-progress-bar>
-              <p class="variable-valor">210 dBA</p></div>
-            </ion-col>
-            <ion-col>
-              <div class="div-icono"><img src="/assets/vibracion.svg"></div>
-              <div class="div-variable"><p class="variable-titulo">Vibración</p>
+              <p class="variable-valor">210 dBA</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="div-icono"><img src="/assets/vibracion.svg"></div>
+            <div class="div-variable">
+              <p class="variable-titulo">Vibración</p>
               <ion-progress-bar color="success" value="0.6"></ion-progress-bar>
-              <p class="variable-valor">30 Hz</p></div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card-content>
-    </ion-card>
-    
-    <button (click)="getAllTasks()">getAllTasks</button>
-    <button (click)="getTask()">getTask</button>
+              <p class="variable-valor">30 Hz</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row><ion-button color="light" clear (click)="pushpage()" > <u>ver detalles...</u></ion-button></ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <button (click)="getAllTasks()">getAllTasks</button>
+  <button (click)="getTask()">getTask</button>
 
 
 
