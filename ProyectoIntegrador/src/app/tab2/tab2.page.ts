@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class Tab2Page {
 
-HEAD
-  constructor(private router:Router,public popoverController: PopoverController){}
+
+  constructor(private router:Router){}
 /*
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
