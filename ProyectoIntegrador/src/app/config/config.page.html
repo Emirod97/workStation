@@ -1,9 +1,88 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>config</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content color="light">
+   
+  <ion-img (click)="return()" class="backwards" src="./assets/_ionicons_svg_md-arrow-back.svg"></ion-img>
+    
+  <ion-card-header style="padding: 13px 25px 13px 25px;">
+  Dispositivo 1 <img style="width:16px; position: absolute;
+top: 7px;" src="./assets/_ionicons_svg_md-create.svg">
+    <ion-textarea text-wrap class= "descripcion" placeholder="No se encuentra ninguna descripción…" clearOnEdit="true"></ion-textarea>
+</ion-card-header>
 
-<ion-content padding>
+<ion-card-header class="notificacion" style="margin:20px 0px 20px 0px; padding: 0px 20px 0px 20px;">
+<ion-item lines="none">
+  <ion-label>Envio de Notificación</ion-label>
+  <ion-toggle></ion-toggle>
+  </ion-item>
+</ion-card-header>
+<p class="alerta">
+Si se sobrepasa alguno de los límites,<br> se le notificará con una alerta.</p>
+
+<ion-card-header class="notificacion" style="margin:20px 0px 20px 0px; padding: 0px 20px 0px 20px;">
+<ion-item lines="none">
+  <ion-label>Limites</ion-label>
+  </ion-item>
+</ion-card-header>
+
+<ion-grid>
+  <ion-row>
+      <ion-col style="color:#8a8a8a; font-weight: bold; font-size:18px; padding-left:20px;">
+         <img style="height:30px; margin-right:10px; vertical-align:middle" src="./assets/icons8-sun.png">Iluminación
+      </ion-col>
+    </ion-row>
+   <ion-row>
+      <ion-col style="margin-left:20px;">
+        Max <ion-input type="number" placeholder="lms"></ion-input>
+      </ion-col>
+      <ion-col>
+        Min  <ion-input type="number" placeholder="lms"></ion-input>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row style="margin-top:30px;">
+      <ion-col style="color:#8a8a8a; font-weight: bold; font-size:18px; padding-left:20px;">
+         <img style="height:30px; margin-right:10px; vertical-align:middle" src="./assets/icons8-temperature.png">Temperatura
+      </ion-col>
+    </ion-row>
+   <ion-row>
+      <ion-col style="margin-left:20px;">
+        Max <ion-input type="number" placeholder="°C"></ion-input>
+      </ion-col>
+      <ion-col>
+        Min  <ion-input type="number" placeholder="°C"></ion-input>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row style="margin-top:30px;">
+      <ion-col style="color:#8a8a8a; font-weight: bold; font-size:18px; padding-left:20px;">
+         <img style="height:30px; margin-right:10px; vertical-align:middle" src="./assets/icons8-room_sound.png">Ruido
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="margin-left:20px;">
+        Max <ion-input type="number" placeholder="dBA" ></ion-input>
+      </ion-col>
+      <ion-col>
+        Min  <ion-input type="number" placeholder="dBA"></ion-input>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row style="margin-top:30px;">
+      <ion-col style="color:#8a8a8a; font-weight: bold; font-size:18px; padding-left:20px;">
+         <img style="height:30px; margin-right:10px; vertical-align:middle" src="./assets/icons8-states.png">Vibración
+      </ion-col>
+    </ion-row>
+
+   <ion-row>
+      <ion-col style="margin-left:20px;">
+        Max <ion-input type="number" placeholder="Hz"></ion-input>
+      </ion-col>
+      <ion-col>
+        Min  <ion-input type="number" placeholder="Hz"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

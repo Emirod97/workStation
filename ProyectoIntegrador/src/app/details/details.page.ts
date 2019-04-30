@@ -14,7 +14,7 @@ export class DetailsPage implements OnInit {
 
   lineChart: any;
 
-  constructor(public router: Router) { }
+  constructor(public router: Router,public navCtrl:NavController) { }
 
   ngOnInit() {
     this.mostrar();
@@ -23,6 +23,14 @@ export class DetailsPage implements OnInit {
   back(){
     this.router.navigateByUrl("/app/tabs/tab1");
   }
+
+  configuration(){
+    
+      this.navCtrl.navigateForward("config");
+    
+  }
+
+
 
   mostrar(){
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {

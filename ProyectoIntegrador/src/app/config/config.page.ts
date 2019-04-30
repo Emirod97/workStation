@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-config',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router,public navCtrl:NavController) { }
 
   ngOnInit() {
   }
 
+  return(){
+    this.router.navigateByUrl('/(DetailsPage');
+
+  }
 }
