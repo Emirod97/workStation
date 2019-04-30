@@ -8,10 +8,24 @@ import { Router } from '@angular/router';
 })
 export class Tab2Page {
 
+HEAD
+  constructor(private router:Router,public popoverController: PopoverController){}
+/*
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: PopoverComponent,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
+  }
+=======
   constructor(private router:Router){}
+>>>>>>> 4e2c41cc4b63f454ebeca126d13a0a5f6707e27a
   
   back(){
     this.router.navigateByUrl("/app/tabs/tab1");
   }
+  */
 }
 

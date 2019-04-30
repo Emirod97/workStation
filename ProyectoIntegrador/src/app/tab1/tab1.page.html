@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header >
   <ion-toolbar>
     <ion-buttons slot="secondary">
       <ion-button>
@@ -55,14 +55,15 @@
             </div>
           </ion-col>
         </ion-row>
-        <ion-row><ion-button color="light" clear (click)="pushpage()" > <u>ver detalles...</u></ion-button></ion-row>
+        <ion-row><ion-button color="light" clear (click)="pushpage()" > ver detalles</ion-button></ion-row>
       </ion-grid>
     </ion-card-content>
   </ion-card>
 
-  <button (click)="getAllTasks()">getAllTasks</button>
-  <button (click)="getTask()">getTask</button>
-
+  <div class="buttons">
+  <ion-button color="warning" (click)="getAllTasks()">Get All Tasks</ion-button>
+  <ion-button  color="warning"(click)="getTask()">Get Task</ion-button>
+</div>
 
 
 </ion-content>

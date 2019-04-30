@@ -29,10 +29,10 @@ export class DetailsPage implements OnInit {
 
       type: 'line',
       data: {
-          labels: ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00","07:00", "08:00", "09:00", "10:00", "11:00", "12:00"],
+          labels: ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00","07:00", "08:00", "09:00", "10:00"],
           datasets: [
               {
-                  label: "lms",
+                  label: "temp",
                   fill: false,
                   lineTension: 0.1,
                   backgroundColor: "rgba(75,192,192,0.4)",
@@ -50,7 +50,7 @@ export class DetailsPage implements OnInit {
                   pointHoverBorderWidth: 2,
                   pointRadius: 3,
                   pointHitRadius: 10,
-                  data: [65, 59, 80, 81, 56, 55, 40, 50, 60, 75, 55, 38, 68],
+                  data: [24, 22, 25, 27, 24, 22, 25, 28, 25, 22],
                   spanGaps: false,
               }
           ]
