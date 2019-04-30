@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PopoverController } from '@ionic/angular';
-//import { PopoverComponent } from '';
 
 @Component({
   selector: 'app-tab2',
