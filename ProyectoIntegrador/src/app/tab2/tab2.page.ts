@@ -10,6 +10,7 @@ import { PopoverController } from '@ionic/angular';
 })
 export class Tab2Page {
 
+<<<<<<< HEAD
   constructor(private router:Router,public popoverController: PopoverController){}
 /*
   async presentPopover(ev: any) {
@@ -20,6 +21,9 @@ export class Tab2Page {
     });
     return await popover.present();
   }
+=======
+  constructor(private router:Router){}
+>>>>>>> 4e2c41cc4b63f454ebeca126d13a0a5f6707e27a
   
   back(){
     this.router.navigateByUrl("/app/tabs/tab1");
