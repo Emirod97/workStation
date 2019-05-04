@@ -12,7 +12,7 @@
 
 <ion-content>
 
-  <ion-card class="welcome-card">
+  <ion-card class="welcome-card" (click)="pushpage()">
     <ion-card-header>
       <p class="card-title">Dispositivo 1</p>
     </ion-card-header>
@@ -55,7 +55,6 @@
             </div>
           </ion-col>
         </ion-row>
-        <ion-row><ion-button color="light" clear (click)="pushpage()" > ver detalles</ion-button></ion-row>
       </ion-grid>
     </ion-card-content>
   </ion-card>
