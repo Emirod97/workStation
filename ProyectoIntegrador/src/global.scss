@@ -9,3 +9,18 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+ion-toolbar
+{
+  --ion-background-color: rgb(255, 206, 9);
+}
+
+ion-content
+{
+  --ion-background-color: #f9f9f9;
+}
+
+ion-title
+{
+    --color: #000000;
+}

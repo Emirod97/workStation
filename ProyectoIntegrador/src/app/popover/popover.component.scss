@@ -1,5 +1,20 @@
-ion-list {
-    &.list-ios {
-        margin-bottom: 0;
-    }
+.filters
+{
+    size: small;
+    font-size: .8rem;
+    text-transform: capitalize;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+
+.aplicar
+{
+    text-transform: capitalize;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+
+ion-checkbox
+{
+    margin-right: 8px;
 }
