@@ -12,9 +12,17 @@
     text-transform: capitalize;
     font-weight: normal;
     letter-spacing: 0;
+    padding: 13px;
+    height: 75px;
 }
 
 ion-checkbox
 {
     margin-right: 8px;
+}
+
+p
+{
+    margin-left: 13px;
+    font-weight: bold;
 }

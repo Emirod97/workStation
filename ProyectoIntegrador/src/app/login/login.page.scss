@@ -17,8 +17,10 @@ ion-item{
 
 ion-button{
     --box-shadow:none;
-    width:70%;
-    margin: auto;
+	margin: auto;
+	--border-radius: 10px;
+	text-transform: capitalize;
+	font-weight: normal;
  }
 
  .the-footer{
