@@ -1,18 +1,26 @@
-<ion-content color="light">
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="return()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
    
-  <ion-img (click)="return()" class="backwards" src="./assets/_ionicons_svg_md-arrow-back.svg"></ion-img>
-    
-  <ion-card-header style="padding: 13px 25px 13px 25px;">
-  Dispositivo 1 <img style="width:16px; position: absolute;
-top: 7px;" src="./assets/_ionicons_svg_md-create.svg">
-    <ion-textarea text-wrap class= "descripcion" placeholder="No se encuentra ninguna descripción…" clearOnEdit="true"></ion-textarea>
+<ion-card-header style="padding: 13px 25px 13px 25px;">
+<ion-label>Nombre del Dispositivo <img style="width:16px; position: initial;" src="./assets/_ionicons_svg_md-create.svg"></ion-label>
+<ion-textarea Value="Dispositivo 1" rows="1" style="color:#8a8a8a; text-align: left; font-size:28px; font-weight: bold;" clearOnEdit="true"></ion-textarea>
 </ion-card-header>
 
 <ion-card-header class="notificacion" style="margin:20px 0px 20px 0px; padding: 0px 20px 0px 20px;">
 <ion-item lines="none">
   <ion-label>Notificaciones</ion-label>
   <ion-toggle></ion-toggle>
-  </ion-item>
+</ion-item>
 </ion-card-header>
 <p class="alerta">
 Si se sobrepasa alguno de los límites,<br> se le notificará con una alerta.</p>
@@ -75,7 +83,7 @@ Si se sobrepasa alguno de los límites,<br> se le notificará con una alerta.</p
       </ion-col>
     </ion-row>
 
-   <ion-row>
+   <ion-row style="margin-bottom:20px;">
       <ion-col style="margin-left:20px;">
         Min <ion-input type="number" placeholder="Hz"></ion-input>
       </ion-col>
