@@ -9,6 +9,14 @@ ion-progress-bar
 {
   height: 8px;
   border-radius: 11px;
+  
+}
+
+ion-card{
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 img
@@ -71,4 +79,8 @@ ion-header
 ion-title
 {
   font-weight: 400;
+}
+.progress #progress-indeterminate{
+
+background: red !important;
 }

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import {DataService} from '../services/data.service'
-import {Data} from '../models/data';
 import { NavController } from '@ionic/angular';
 import { Routes, RouterModule, Router } from '@angular/router';
+import { Data } from './../models/data';
+
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -10,10 +12,30 @@ import { Routes, RouterModule, Router } from '@angular/router';
 })
 export class Tab1Page {
   router: any;
+ datas:Data[] = [];
+ 
+ elemento = 0.5;
 
-constructor(private DataService: DataService, public navCtrl: NavController) { }
+ colorcode:string='success';
+
+constructor(public DataService: DataService, public navCtrl: NavController) { }
 
 
+
+methodd(){
+  
+}
+
+ngOnInit(){
+ this.DataService.getAllData()
+  .subscribe(datas=>{
+    this.datas = datas;
+    console.log(datas);
+
+  })
+
+  
+}
 getAllTasks(){
   this.DataService.getAllData()
   .subscribe(data =>{
@@ -22,12 +44,6 @@ getAllTasks(){
 }
 
 
-getTask(){
-  this.DataService.getTask('2')
-  .subscribe(data =>{
-    console.log(data);
-  });
-}
 
 pushpage(){
   this.navCtrl.navigateForward("details");
