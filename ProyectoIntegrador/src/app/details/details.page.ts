@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { NavigationCancel, Router } from '@angular/router';
 import { Chart } from 'chart.js';
@@ -10,17 +10,17 @@ import { Chart } from 'chart.js';
 })
 export class DetailsPage implements OnInit {
 
-  @ViewChild('lineCanvas') lineCanvas;
+
 
   tempShow: boolean;
   ilumShow: boolean;
   ruidoShow: boolean;
   vibShow: boolean;
 
-  lineChartTemp: any;
-  lineChartIlum: any;
-  lineChartRuido: any;
-  lineChartVib: any;
+  lineChartTemp: Chart;
+  lineChartIlum: Chart;
+  lineChartRuido: Chart;
+  lineChartVib: Chart;
 
   labelTemp: any;
   labelIlum: any;
@@ -52,50 +52,50 @@ export class DetailsPage implements OnInit {
 
   mostrartemp() {
 
-    this.labelTemp= ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00","07:00", "08:00", "09:00", "10:00"]
-    this.dataTemp= [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
+    this.labelTemp = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00"]
+    this.dataTemp = [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
 
     this.tempShow = this.tempShow = true;
     this.ilumShow = this.ilumShow = false;
     this.vibShow = this.vibShow = false;
     this.ruidoShow = this.ruidoShow = false;
 
+    setTimeout(() => {
+      this.lineChartTemp = new Chart('linechartTemp', {
 
-    
-        this.lineChartTemp = new Chart('linechartTemp', {
-    
-          type: 'line',
-          data: {
-              labels: this.labelTemp,
-              datasets: [
-                  {
-                      label: "temp",
-                      fill: false,
-                      lineTension: 0.1,
-                      backgroundColor: "rgba(75,192,192,0.4)",
-                      borderColor: "rgba(185,184,182,1)",
-                      borderCapStyle: 'butt',
-                      borderDash: [],
-                      borderDashOffset: 0.0,
-                      borderJoinStyle: 'miter',
-                      pointBorderColor: "rgba(75,192,192,1)",
-                      pointBackgroundColor: "#fff",
-                      pointBorderWidth: 1,
-                      pointHoverRadius: 5,
-                      pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                      pointHoverBorderColor: "rgba(220,220,220,1)",
-                      pointHoverBorderWidth: 2,
-                      pointRadius: 3,
-                      pointHitRadius: 10,
-                      data: this.dataTemp,
-                      spanGaps: false,
-                  }
-              ]
-          }
-    
+        type: 'line',
+        data: {
+          labels: this.labelTemp,
+          datasets: [
+            {
+              label: "temp",
+              fill: false,
+              lineTension: 0.1,
+              backgroundColor: "rgba(75,192,192,0.4)",
+              borderColor: "rgba(185,184,182,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 3,
+              pointHitRadius: 10,
+              data: this.dataTemp,
+              spanGaps: false,
+            }
+          ]
+        }
+  
       });
     
-      
+    }, 50);
+    
   }
 
 
@@ -106,43 +106,46 @@ export class DetailsPage implements OnInit {
     this.vibShow = this.vibShow = false;
     this.ruidoShow = this.ruidoShow = false;
 
-    this.labelIlum= ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00","07:00", "08:00", "09:00", "10:00"]
-    this.dataIlum= [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
-    
-    this.lineChartIlum = new Chart('linechartIlum', {
+    this.labelIlum = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00"]
+    this.dataIlum = [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
 
-      type: 'line',
-      data: {
+    setTimeout(() => {
+      this.lineChartIlum = new Chart('linechartIlum', {
+
+        type: 'line',
+        data: {
           labels: this.labelIlum,
           datasets: [
-              {
-                  label: "temp",
-                  fill: false,
-                  lineTension: 0.1,
-                  backgroundColor: "rgba(75,192,192,0.4)",
-                  borderColor: "rgba(185,184,182,1)",
-                  borderCapStyle: 'butt',
-                  borderDash: [],
-                  borderDashOffset: 0.0,
-                  borderJoinStyle: 'miter',
-                  pointBorderColor: "rgba(75,192,192,1)",
-                  pointBackgroundColor: "#fff",
-                  pointBorderWidth: 1,
-                  pointHoverRadius: 5,
-                  pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                  pointHoverBorderColor: "rgba(220,220,220,1)",
-                  pointHoverBorderWidth: 2,
-                  pointRadius: 3,
-                  pointHitRadius: 10,
-                  data: this.dataIlum,
-                  spanGaps: false,
-              }
+            {
+              label: "temp",
+              fill: false,
+              lineTension: 0.1,
+              backgroundColor: "rgba(75,192,192,0.4)",
+              borderColor: "rgba(185,184,182,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 3,
+              pointHitRadius: 10,
+              data: this.dataIlum,
+              spanGaps: false,
+            }
           ]
-      }
-
-  });
-
+        }
   
+      });
+  
+    }, 50);
+    
+
   }
 
   mostrarruido() {
@@ -152,43 +155,46 @@ export class DetailsPage implements OnInit {
     this.vibShow = this.vibShow = false;
     this.ruidoShow = this.ruidoShow = true;
 
-    this.labelRuido= ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00","07:00", "08:00", "09:00", "10:00"]
-    this.dataRuido= [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
+    this.labelRuido = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00"]
+    this.dataRuido = [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
 
-     this.lineChartRuido = new Chart('linechartRuido', {
- 
-       type: 'line',
-       data: {
-           labels: this.labelRuido,
-           datasets: [
-               {
-                   label: "temp",
-                   fill: false,
-                   lineTension: 0.1,
-                   backgroundColor: "rgba(75,192,192,0.4)",
-                   borderColor: "rgba(185,184,182,1)",
-                   borderCapStyle: 'butt',
-                   borderDash: [],
-                   borderDashOffset: 0.0,
-                   borderJoinStyle: 'miter',
-                   pointBorderColor: "rgba(75,192,192,1)",
-                   pointBackgroundColor: "#fff",
-                   pointBorderWidth: 1,
-                   pointHoverRadius: 5,
-                   pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                   pointHoverBorderColor: "rgba(220,220,220,1)",
-                   pointHoverBorderWidth: 2,
-                   pointRadius: 3,
-                   pointHitRadius: 10,
-                   data: this.dataRuido,
-                   spanGaps: false,
-               }
-           ]
-       }
- 
-   });
- 
-   
+    setTimeout(() => {
+      this.lineChartRuido = new Chart('linechartRuido', {
+
+        type: 'line',
+        data: {
+          labels: this.labelRuido,
+          datasets: [
+            {
+              label: "temp",
+              fill: false,
+              lineTension: 0.1,
+              backgroundColor: "rgba(75,192,192,0.4)",
+              borderColor: "rgba(185,184,182,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 3,
+              pointHitRadius: 10,
+              data: this.dataRuido,
+              spanGaps: false,
+            }
+          ]
+        }
+  
+      });
+    }, 50);
+    
+
+
   }
 
   mostrarvib() {
@@ -198,41 +204,44 @@ export class DetailsPage implements OnInit {
     this.vibShow = this.vibShow = true;
     this.ruidoShow = this.ruidoShow = false;
 
-    this.labelVib= ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00","07:00", "08:00", "09:00", "10:00"]
-    this.dataVib= [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
+    this.labelVib = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00"]
+    this.dataVib = [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
 
-        this.lineChartVib = new Chart('linechartVib', {
-    
-          type: 'line',
-          data: {
-              labels: this.labelVib,
-              datasets: [
-                  {
-                      label: "temp",
-                      fill: false,
-                      lineTension: 0.1,
-                      backgroundColor: "rgba(75,192,192,0.4)",
-                      borderColor: "rgba(185,184,182,1)",
-                      borderCapStyle: 'butt',
-                      borderDash: [],
-                      borderDashOffset: 0.0,
-                      borderJoinStyle: 'miter',
-                      pointBorderColor: "rgba(75,192,192,1)",
-                      pointBackgroundColor: "#fff",
-                      pointBorderWidth: 1,
-                      pointHoverRadius: 5,
-                      pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                      pointHoverBorderColor: "rgba(220,220,220,1)",
-                      pointHoverBorderWidth: 2,
-                      pointRadius: 3,
-                      pointHitRadius: 10,
-                      data: this.dataVib,
-                      spanGaps: false,
-                  }
-              ]
-          }
-    
+    setTimeout(() => {
+      this.lineChartVib = new Chart('linechartVib', {
+
+        type: 'line',
+        data: {
+          labels: this.labelVib,
+          datasets: [
+            {
+              label: "temp",
+              fill: false,
+              lineTension: 0.1,
+              backgroundColor: "rgba(75,192,192,0.4)",
+              borderColor: "rgba(185,184,182,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 3,
+              pointHitRadius: 10,
+              data: this.dataVib,
+              spanGaps: false,
+            }
+          ]
+        }
+  
       });
+  
+    }, 50);
     
   }
 
