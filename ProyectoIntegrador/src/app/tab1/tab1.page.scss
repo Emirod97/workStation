@@ -43,6 +43,8 @@ ion-card
 .card-title
 {
   font-size: 10pt;
+  margin-bottom: -8px;
+  margin-top: 0;
 }
 
 ion-grid
@@ -53,10 +55,20 @@ ion-grid
 
 ion-card
 {
-  box-shadow: 3px 3px 10px #D8D8D8;
+  box-shadow: 0px 0px 3px #D8D8D8;
   background-color: white;
 }
 
 .buttons{
   padding-left: 25%;
+}
+
+ion-header
+{
+  box-shadow: 0px 2px 8px #D8D8D8;
+}
+
+ion-title
+{
+  font-weight: 400;
 }

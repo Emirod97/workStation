@@ -13,6 +13,7 @@
 ion-toolbar
 {
   --ion-background-color:#FFDA00;
+  --min-height: 65px;
 }
 
 ion-content
@@ -25,4 +26,13 @@ ion-title
     --color: #000000;
 }
 
+ion-card
+{
+  box-shadow: 0px 0px 5px #D8D8D8;
+  background-color: white;
+}
 
+ion-header
+{
+  box-shadow: 0px 2px 8px #D8D8D8;
+}
