@@ -63,8 +63,13 @@ export class Tab2Page {
       this.tempShow=true;
     }
 
-    this.labelTemp = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00"]
-    this.dataTemp = [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
+    this.labelTemp = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00"]
+    this.dataTemp = [20.1, 22, 21, 20.5, 20, 21, 20, 21, 20.5, 21];
+
+    this.tempShow = this.tempShow = true;
+    this.ilumShow = this.ilumShow = false;
+    this.vibShow = this.vibShow = false;
+    this.ruidoShow = this.ruidoShow = false;
 
     setTimeout(() => {
       this.lineChartTemp = new Chart('linechartTemp', {
@@ -113,8 +118,8 @@ export class Tab2Page {
       this.ilumShow=true;
     }
     
-    this.labelIlum = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00"]
-    this.dataIlum = [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
+    this.labelIlum = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00"]
+    this.dataIlum = [0, 0, 0, 0, 0, 0, 152, 150, 155, 152];
 
     setTimeout(() => {
       this.lineChartIlum = new Chart('linechartIlum', {
@@ -127,17 +132,17 @@ export class Tab2Page {
               label: "luxes",
               fill: false,
               lineTension: 0.4,
-              backgroundColor: "rgba(75,192,192,0.4)",
+              backgroundColor: "rgba(75,12,192,0.4)",
               borderColor: "rgba(185,184,182,1)",
               borderCapStyle: 'round',
               borderDash: [],
               borderDashOffset: 0.0,
               borderJoinStyle: 'miter',
-              pointBorderColor: "rgba(75,192,192,1)",
+              pointBorderColor: "rgba(75,12,192,1)",
               pointBackgroundColor: "#fff",
               pointBorderWidth: 3,
               pointHoverRadius: 5,
-              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBackgroundColor: "rgba(75,12,192,1)",
               pointHoverBorderColor: "rgba(220,220,220,1)",
               pointHoverBorderWidth: 2,
               pointRadius: 3,
@@ -163,8 +168,8 @@ export class Tab2Page {
       this.ruidoShow=true;
     }
     
-    this.labelRuido = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00"]
-    this.dataRuido = [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
+    this.labelRuido = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00"]
+    this.dataRuido = [67, 57, 87, 51, 83, 91, 86, 63, 62, 82];
 
     setTimeout(() => {
       this.lineChartRuido = new Chart('linechartRuido', {
@@ -201,6 +206,7 @@ export class Tab2Page {
       });
     }, 50);
     
+    
 
 
   }
@@ -214,8 +220,8 @@ export class Tab2Page {
       this.vibShow=true;
     }
 
-    this.labelVib = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00"]
-    this.dataVib = [24, 22, 25, 27, 24, 22, 25, 28, 25, 22];
+    this.labelVib = ["12:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00"]
+    this.dataVib = [16.16, 16.13, 16.11, 16.17, 16.20, 16.9, 16.20, 16.18, 16.11, 16.13];
 
     setTimeout(() => {
       this.lineChartVib = new Chart('linechartVib', {
