@@ -13,9 +13,47 @@
   <p class="page-header">Dispostivo 1</p>
   <p class="update-time">20 de abril de 2019</p>
   
-<ion-card>
-  <ion-card-content>
-    <p class="graph-title">Iluminación (lms)</p>
-  </ion-card-content>
-</ion-card>
+  <div *ngIf="ilumShow">
+      <ion-card style="background-color:#ffffff;">
+        <ion-card-content>
+          <p class="graph-title">Iluminación</p>
+        </ion-card-content>
+        <ion-card-content>
+          <canvas id="linechartIlum"></canvas>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    
+  <div *ngIf="tempShow">
+      <ion-card style="background-color:#ffffff;">
+        <ion-card-content>
+          <p class="graph-title">Temperatura</p>
+        </ion-card-content>
+        <ion-card-content>
+          
+            <canvas id="linechartTemp"></canvas>
+            
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="ruidoShow">
+      <ion-card style="background-color:#ffffff;">
+        <ion-card-content>
+          <p class="graph-title">Ruido</p>
+        </ion-card-content>
+        <ion-card-content>
+          <canvas id="linechartRuido"></canvas>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="vibShow">
+      <ion-card style="background-color:#ffffff;">
+        <ion-card-content>
+          <p class="graph-title">Vibracion</p>
+        </ion-card-content>
+        <ion-card-content>
+          <canvas id="linechartVib"></canvas>
+        </ion-card-content>
+      </ion-card>
+    </div>
 </ion-content>

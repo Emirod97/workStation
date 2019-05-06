@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Tab2Page } from '../tab2/tab2.page';
+import { PopoverController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-popover',
@@ -7,8 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopoverComponent implements OnInit {
 
-  constructor() { }
+  tempShow: boolean =false;
+  ilumShow: boolean =false;
+  ruidoShow: boolean =false;
+  vibShow: boolean =false;
+
+  cont: Tab2Page;
+
+  constructor(public popoverController: PopoverController) { }
 
   ngOnInit() {}
+
+  ilum(){
+    this.cont.mostrarilum();
+  }
+
+  temp(){
+    this.cont.mostrartemp();
+  }
+
+  ruido(){
+   this.cont.mostrarruido();
+  }
+
+  vib(){
+    this.cont.mostrarvib();
+  }
+
+  carrar(){
+    this.popoverController.dismiss();
+  }
 
 }

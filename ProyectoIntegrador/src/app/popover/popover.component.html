@@ -1,20 +1,20 @@
 <p>Variables</p>
 
 <ion-list>
-  <ion-item>
-    <ion-checkbox color="primary"></ion-checkbox>
+  <ion-item (click)="ilum()">
+    <ion-checkbox color="primary" checked></ion-checkbox>
     <ion-label>Iluminación</ion-label>
   </ion-item>
-  <ion-item>
-      <ion-checkbox color="primary"></ion-checkbox>
+  <ion-item (click)="temp()">
+      <ion-checkbox color="primary" checked></ion-checkbox>
       <ion-label>Temperatura</ion-label>
   </ion-item>
-  <ion-item>
-      <ion-checkbox color="primary"></ion-checkbox>
+  <ion-item (click)="ruido()">
+      <ion-checkbox color="primary" checked></ion-checkbox>
       <ion-label>Ruido</ion-label>
     </ion-item>
-    <ion-item>
-        <ion-checkbox color="primary"></ion-checkbox>
+    <ion-item (click)="vib()">
+        <ion-checkbox color="primary" checked></ion-checkbox>
         <ion-label>Vibración</ion-label>
     </ion-item>
 </ion-list>
@@ -35,4 +35,4 @@
     monthShortNames="ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov, dic"></ion-datetime>
 </ion-item>
 
-<ion-button class="aplicar" expand="full" color="primary" size="default">Aplicar</ion-button>
+<ion-button (click)="cerrar()" class="aplicar" expand="full" color="primary" size="default">Aplicar</ion-button>
