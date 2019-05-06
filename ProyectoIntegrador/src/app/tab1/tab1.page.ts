@@ -33,6 +33,10 @@ pushpage(){
   this.navCtrl.navigateForward("details");
 }
 
+logout(){
+  this.navCtrl.navigateRoot('');
+}
+
 
 
 }

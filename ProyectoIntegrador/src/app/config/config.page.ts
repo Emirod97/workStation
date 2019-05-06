@@ -16,7 +16,7 @@ export class ConfigPage implements OnInit {
   }
 
   return(){
-    this.router.navigateByUrl('/(DetailsPage');
+    this.navCtrl.navigateBack('details');
 
   }
 }

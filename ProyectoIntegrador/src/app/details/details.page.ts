@@ -39,7 +39,7 @@ export class DetailsPage implements OnInit {
   }
 
   back() {
-    this.router.navigateByUrl("/app/tabs/tab1");
+    this.navCtrl.navigateBack("/app/tabs/tab1");
   }
 
   configuration() {
