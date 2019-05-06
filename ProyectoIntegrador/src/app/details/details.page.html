@@ -6,10 +6,13 @@
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="secondary">
-      <ion-button><ion-icon name="funnel"></ion-icon></ion-button>
+      <ion-button>
+        <ion-icon name="funnel"></ion-icon>
+      </ion-button>
       <ion-button (click)="configuration()">
         <!-- <ion-icon slot="icon-only" name="settings"></ion-icon> -->
-        <ion-icon name="settings"></ion-icon>      </ion-button>
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-title>Detalles</ion-title>
   </ion-toolbar>
@@ -21,26 +24,58 @@
 
   <!-- Segment buttons with the first checked and the last disabled -->
   <ion-segment>
-    <ion-segment-button checked>
+    <ion-segment-button checked (click)="mostrartemp()">
       <ion-label>Temperatura</ion-label>
     </ion-segment-button>
-    <ion-segment-button>
+    <ion-segment-button (click)="mostrarilum()">
       <ion-label>Iluminación</ion-label>
     </ion-segment-button>
-    <ion-segment-button>
+    <ion-segment-button (click)="mostrarruido()">
       <ion-label>Ruido</ion-label>
     </ion-segment-button>
-    <ion-segment-button>
+    <ion-segment-button (click)="mostrarvib()">
       <ion-label>Vibración</ion-label>
     </ion-segment-button>
   </ion-segment>
 
-  <ion-card style="background-color:#ffffff;">
-    <ion-card-content>
-      <p class="graph-title">Temperatura</p>
-    </ion-card-content>
-    <ion-card-content>
-      <canvas #lineCanvas></canvas>
-    </ion-card-content>
-  </ion-card>
+  <div *ngIf="tempShow">
+    <ion-card style="background-color:#ffffff;">
+      <ion-card-content>
+        <p class="graph-title">Temperatura</p>
+      </ion-card-content>
+      <ion-card-content>
+        <canvas id="linechartTemp"></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="ilumShow">
+    <ion-card style="background-color:#ffffff;">
+      <ion-card-content>
+        <p class="graph-title">Iluminación</p>
+      </ion-card-content>
+      <ion-card-content>
+        <canvas id="linechartIlum"></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="ruidoShow">
+    <ion-card style="background-color:#ffffff;">
+      <ion-card-content>
+        <p class="graph-title">Ruido</p>
+      </ion-card-content>
+      <ion-card-content>
+        <canvas id="linechartRuido"></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="vibShow">
+    <ion-card style="background-color:#ffffff;">
+      <ion-card-content>
+        <p class="graph-title">Vibracion</p>
+      </ion-card-content>
+      <ion-card-content>
+        <canvas id="linechartVib"></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
