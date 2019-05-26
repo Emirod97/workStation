@@ -12,9 +12,9 @@
 <ion-content>
   <ion-list>
       <ion-item *ngFor="let data of datas;let index = i">
-  <ion-card class="welcome-card" (click)="pushpage()">
+  <ion-card (click)="showData(data)" class="welcome-card" (click)="pushpage()">
     <ion-card-header>
-      <p class="card-title">Dispositivo {{ data.id_sensor }}</p>
+      <p class="card-title" >Dispositivo {{ data.id_sensor }} </p>
     </ion-card-header>
     <ion-card-content>
       <ion-grid>
@@ -23,7 +23,7 @@
             <div class="div-icono"><img src="/assets/iluminacion.svg"></div>
             <div class="div-variable">
               <p class="variable-titulo">Iluminación</p>
-              <ion-progress-bar value="0.7" [ngClass]="progress"  ></ion-progress-bar>
+              <ion-progress-bar [value]="value" [color]="(value>.1)?'success':'warning'" ></ion-progress-bar>
               <p class="variable-valor">{{ data.luminosity }}lms</p>
             </div>
           </ion-col>

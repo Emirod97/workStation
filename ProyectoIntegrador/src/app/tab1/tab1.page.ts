@@ -14,7 +14,9 @@ export class Tab1Page {
   router: any;
  datas:Data[] = [];
  
+ value:any=.5;
  elemento = 0.5;
+ color:any="warning"
 
  colorcode:string='success';
 
@@ -43,7 +45,10 @@ getAllTasks(){
   });
 }
 
+showData(data){
+  console.log(data);
 
+}
 
 pushpage(){
   this.navCtrl.navigateForward("details");
