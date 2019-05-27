@@ -2,6 +2,11 @@ const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const mysql = require('mysql')
+const cors = require('cors');
+
+
+
+app.use(cors({origin: '*'}));
 
 app.use(morgan('short'))
 
@@ -10,7 +15,7 @@ const connection = mysql.createConnection({
     port: 3306,
     user: 'root',
     password: 'Password1?',
-    database: 'workstation_db'
+    database: 'wstation'
 })
 
 app.get('/data/:id', (req, res) => {
@@ -37,7 +42,9 @@ app.get("/", (req, res) => {
 
 app.get('/data', (req, res) => {
     console.log("Fetching all data")
-    const queryString = 'SELECT * FROM data'
+   // const queryString = 'SELECT * FROM data'
+
+   const queryString = 'SELECT tt.*FROM data tt INNER JOIN (SELECT id_sensor, MAX(data_date) AS MaxDateTime FROM data  GROUP BY id_sensor) groupedtt   ON tt.id_sensor = groupedtt.id_sensor AND tt.data_date = groupedtt.MaxDateTime ORDER BY id_sensor ASC'
 
     connection.query(queryString, (err, rows, fields) => {
         if (err) {
