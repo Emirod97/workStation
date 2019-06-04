@@ -10,7 +10,7 @@ export class DataService {
 
   private api = 'https://jsonplaceholder.typicode.com';
 
-  public BASE_URL = 'http://192.168.137.1:3000'; 
+  public BASE_URL = 'http://localhost:3000'; 
 
   constructor( private http:HttpClient ) {
    }
